@@ -1,0 +1,101 @@
+body{
+    background-color: 	whitesmoke;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    border: 2px solid white;
+    width: 900px;
+    height: 570px;
+    background-color: white;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 20px;
+    display: flex;
+}
+
+img{
+    border-radius: 20px;
+    height: 550px;
+    margin-top: 20px;
+    margin: 10px;
+}
+
+h1{
+    margin-top: 50px;
+    margin-left: 80px;
+    font-size: 40px;
+    color: #191970;
+}
+
+p{
+    margin-top: 110px;
+    margin-left: -255px;
+    color: #A9A9A9;
+    font-size: 19px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+
+input[id=name] {
+    margin-top: 230px;
+    margin-left: 320px;
+}
+
+label[for=name] {
+    margin-top: 150px;
+    transform: translateX(365px); 
+}
+
+input{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: wheat;
+}
+
+label{
+    color: #191970	;
+}
+
+input[id=email] {
+    transform: translateY(210px);
+    margin-left: -510px;
+}
+
+label[for=email] {
+    position: relative;
+    top: 170px;
+    right: 405px;   
+}
+
+input[id=phone] {
+    position: absolute;
+    top: 410px;
+    left: 365px;
+}
+
+label[for=phone] {
+    position: relative;
+    top: 255px;
+    right: 400px;
+}
+
+button{
+    position: absolute;
+    top: 510px;
+    left: 640px;
+    width: 130px;
+    height: 44px;
+    border-radius: 5px;
+    background-color: #00008B;
+    border-color: #00008B;
+    cursor: pointer;
+    color: white;
+}
