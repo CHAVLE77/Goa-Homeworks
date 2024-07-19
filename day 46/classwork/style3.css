@@ -1,0 +1,39 @@
+.container{
+    border: 1px solid black;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+input{
+    width: 90%;
+    height: 35px;
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+    border-color: rgb(59, 59, 10);
+}
+
+input[type=radio] {
+    width: 15px;
+}
+
+label{
+    margin-right: 220px;
+}
+
+label[for=repeat-password] {
+    margin-right: 170px;
+
+}
+
+button{
+    width: 75%;
+    height: 35px;
+    color: white;
+    background-color:  rgb(50, 84, 250);
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}

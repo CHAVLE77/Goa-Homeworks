@@ -1,0 +1,11 @@
+b{
+    font-size:20px ;
+}
+
+button{
+    width: 100px;
+    height: 25px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}

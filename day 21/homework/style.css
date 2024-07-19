@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+header {
+    height: 70px;
+    background-color: rgb(5, 95, 9);
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+}
+.background-image {
+    background-image:url('./goa.jpg')
+    wid
+}

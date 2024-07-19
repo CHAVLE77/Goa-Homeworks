@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(65, 112, 246)
+    ;
+}
+
+.container{
+    border: 2px solid white;
+    width: 300px;
+    height: 440px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+}
+
+#Login{
+    font-size: larger;
+    
+}
+
+input{
+    width: 90%;
+    height: 25px;
+    
+    
+}
+
+#button{
+    color: white;
+    background-color: rgb(10, 52, 166);
+    width: 200px;
+    height: 30px;
+}
+
+#a1 {
+    display: inline-block;
+}
+
+#button2{
+    color: white;
+    background-color: rgb(26, 26, 82);
+    width: 200px;
+    height: 30px;
+
+}
+
+#button3{
+    width: 200px;
+    height: 30px;
+}

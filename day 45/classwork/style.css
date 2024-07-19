@@ -1,0 +1,181 @@
+body{
+    background-image: url("image.webp")
+}
+
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+ 
+ .york{
+    width: 500px;
+    height: 380px;
+    background-image: url("andre-benz-CR0E20Of7yU-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+} 
+
+.york:hover{
+    transform: translateY(-10px);
+    transition: 0.8;
+}
+
+.geo{
+    width: 500px;
+    height: 380px;
+    background-image: url("mike-swigunski-i4X2JzIiesE-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+}
+
+.geo:hover{
+    transform: translateY(-10px);
+    transition: 0.8;
+}
+
+.losangeles{
+    width: 500px;
+    height: 380px;
+    background-image: url("henning-witzel-ukvgqriuOgo-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+}
+
+.losangeles:hover{
+    transform: translateY(-10px);
+    transition: 0.8;
+}
+
+.florence{
+    width: 500px;
+    height: 380px;
+    background-image: url("heidi-kaden-xWZa0GYCMbo-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+}
+
+.florence:hover{
+    transform: translateY(-10px);
+    transition: 0.8;
+}
+
+.dubai{
+    width: 500px;
+    height: 380px;
+    background-image: url("david-rodrigo-Fr6zexbmjmc-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+}
+
+.dubai:hover{
+    transform: translateY(-10px);
+    transition: 0.8;
+}
+
+.tokyo{
+    width: 500px;
+    height: 380px;
+    background-image: url("takashi-miyazaki-64ajtpEzlYc-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+}
+
+.tokyo:hover{
+    transform: translateY(-10px);
+    transition: 0.8;
+}
+
+.text{
+    color: white;
+    
+}
+
+
+
+.york .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 8, 37, 0.6);
+    padding-top: 190px;
+    opacity: 0.8;
+}
+
+
+.geo .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 21, 38, 0.6);
+    padding-top: 190px;
+    opacity: 0.8;
+}
+
+.losangeles .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 8, 37, 0.6);
+    padding-top: 190px;
+    opacity: 0.8;
+}
+
+
+.florence .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 168, 134, 0.6);
+    padding-top: 190px;
+    opacity: 0.9;
+}
+
+.dubai .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(186, 144, 109, 0.6);
+    padding-top: 190px;
+    opacity: 0.9;
+}
+
+
+
+.tokyo .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 8, 37, 0.6);
+    padding-top: 190px;
+    opacity: 0.9;
+}
+
+
+a{
+    text-decoration: none;
+}

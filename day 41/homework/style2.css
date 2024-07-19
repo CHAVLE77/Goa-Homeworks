@@ -1,0 +1,152 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+ 
+ .york{
+    width: 500px;
+    height: 380px;
+    background-image: url("andre-benz-CR0E20Of7yU-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+} 
+
+.geo{
+    width: 500px;
+    height: 380px;
+    background-image: url("mike-swigunski-i4X2JzIiesE-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+}
+
+
+.losangeles{
+    width: 500px;
+    height: 380px;
+    background-image: url("henning-witzel-ukvgqriuOgo-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+}
+
+
+.florence{
+    width: 500px;
+    height: 380px;
+    background-image: url("heidi-kaden-xWZa0GYCMbo-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+}
+
+
+.dubai{
+    width: 500px;
+    height: 380px;
+    background-image: url("david-rodrigo-Fr6zexbmjmc-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+}
+
+.tokyo{
+    width: 500px;
+    height: 380px;
+    background-image: url("takashi-miyazaki-64ajtpEzlYc-unsplash\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -5px 5px 20px;
+    margin: 20px;
+}
+
+
+.text{
+    color: white;
+    
+}
+
+
+
+.york .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 8, 37, 0.6);
+    padding-top: 190px;
+    opacity: 0.8;
+}
+
+
+.geo .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 21, 38, 0.6);
+    padding-top: 190px;
+    opacity: 0.8;
+}
+
+.losangeles .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 8, 37, 0.6);
+    padding-top: 190px;
+    opacity: 0.8;
+}
+
+
+.florence .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 168, 134, 0.6);
+    padding-top: 190px;
+    opacity: 0.9;
+}
+
+.dubai .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(186, 144, 109, 0.6);
+    padding-top: 190px;
+    opacity: 0.9;
+}
+
+
+
+.tokyo .text{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 8, 37, 0.6);
+    padding-top: 190px;
+    opacity: 0.9;
+}
