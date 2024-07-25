@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    animation-name: myfirst;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myfirst{
+0%{
+    width: 200px;
+    height: 200px;
+}
+
+20%{
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+}
+
+40%{
+    transform: rotate(90deg);
+    background-color: green;
+    width: 200px;
+    height: 100px;
+}
+
+60%{
+    transform: translateX(100px);
+    width: 300px;
+    height: 100px;
+    background-color: aqua;
+}
+
+80%{
+    width: 400px;
+    height: 400px;
+    transform: translateY(-100px);
+    background-color: black;
+}
+
+100%{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+}
