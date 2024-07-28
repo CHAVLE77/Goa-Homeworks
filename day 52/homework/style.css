@@ -1,0 +1,186 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header{
+    width: 100%;
+    height: 95px;
+    border: solid #202020;
+    background-color: #202020;
+    list-style: none;
+    gap: 18px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    padding: 40px;
+    gap: 10px;
+    align-items: center;
+}
+
+nav a{
+    margin: 40px;
+    text-decoration: none;
+    color: #a0a0a0;
+    position: relative;
+    padding: 0 10px;
+}
+
+nav a:after{
+    content: "";
+    position: absolute;
+    background-color: red;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+nav a:hover:after{
+    width: 100%;
+}
+
+
+button{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #121317;
+    color: white;
+    border-color: white;
+}
+
+button:hover{
+    box-shadow: 0 0 35px rgb(93, 93, 255);
+    border-color: rgb(93, 93, 255);
+    transition: 0.3s;
+}
+
+
+div{
+    width: 200px;
+    height: 500px;
+    margin: auto;
+    background-color: red;
+    margin-top: 200px;
+    animation-name: animate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 200px;
+        height: 500px;
+        background-color: red;
+    }
+    20%{
+        transform: rotate(360deg);
+        background-color: yellow;
+    }
+    40%{
+        transform: rotate(-360deg);
+        background-color: green;
+    }
+
+    60%{
+        transform: rotate(360deg);
+        background-color: aqua;
+    }
+
+    80%{
+        transform: rotate(-360deg);
+        background-color: blue;
+    }
+    100%{
+        transform: rotate(0deg);
+        background-color: red;
+    
+    }
+}
+
+
+@media screen and (max-width: 872px) {
+    header nav{
+        padding: 40px ;
+    }
+
+    button{
+        position: relative;
+        bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 733px) {
+    button{
+        left: 20px;
+    }
+}
+
+
+@media screen and (max-width: 672px) {
+    header nav{
+        gap: 5px;
+        transform: translateX(-50px);
+    }
+    button{
+        left: 50px;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    header nav{
+        gap: 0px
+    };
+}
+
+@media screen and (max-width: 632px) {
+    header nav{
+        flex-direction: column;       
+        gap: 10px;
+    }
+
+    header{
+        height: auto
+    }
+
+    button{
+        top: 20px;
+        left: 10px;
+    }
+};
+
+@media screen and (max-width: 312px) {
+    header{
+        width: 100%;
+        position: absolute;
+    }
+}
+
+
+@media screen and (max-width: 264px) {
+    header nav{
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 179px) {
+    nav a{
+        font-size: 15px;
+    }
+    
+    button{
+        left: 40px;
+    }
+}
+
+
