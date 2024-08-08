@@ -1,0 +1,51 @@
+body{
+    background-color: #202020;
+}
+
+#display{
+    color: white;
+    position: relative;
+    bottom: 20px;
+    left: 30px;
+    font-size: 80px;
+}
+
+.position{
+    position: absolute;
+    left: 47%;
+    top: 40%;
+}
+
+#plus{
+    width: 60px;
+    height: 60px;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 20px;
+    position: relative;
+    right: 10px;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+#minus{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#reset{
+    position: relative;
+    left: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    bottom: 5px;
+    cursor: pointer;
+}
