@@ -1,5 +1,5 @@
 
-1
+# 1
 def how_many_dalmatians(n):
   dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"];
   
@@ -13,7 +13,7 @@ def how_many_dalmatians(n):
     return dogs[2]
 
 
-2
+# 2
 def correct(s):
     s = s.replace("5","S")
     s = s.replace("0","O")
@@ -23,7 +23,7 @@ def correct(s):
 print(correct("50ul1"))
 
 
-3
+# 3
 def max_diff(lst):
     if len(lst) <=1:
         return 0
