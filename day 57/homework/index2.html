@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <p id="touch">touch</p> 
+    <img id="image" src="download.png">   
+    <script>
+        const touch = document.getElementById("touch")
+        const image = document.getElementById("image")
+
+        touch.addEventListener('mouseover',function(){
+            image.style.display = "flex"
+        })
+
+        touch.addEventListener('mouseout',function(){
+            image.style.display = "none"
+        })
+    </script>
+</body>
+</html>
