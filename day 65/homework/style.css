@@ -1,0 +1,14 @@
+.box,.box2{
+    width: 300px;
+    height: 300px;
+    border: solid;
+    margin: 10px;
+}
+
+.togglediv{
+    width: 300px;
+    height: 300px;
+    border: solid;
+    margin: 10px;
+}
+
