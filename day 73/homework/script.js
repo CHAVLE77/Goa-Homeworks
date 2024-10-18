@@ -1,8 +1,3 @@
-let full = new Brand('ford','mustang',"USA")
-console.log(full)
-full.word()
-full.continue1()
-
 
 class Animal {
     constructor(name,foot) {
@@ -41,6 +36,7 @@ class Brand extends car {
     }
 
 }
-
-
-
+let full = new Brand('ford','mustang',"USA")
+console.log(full)
+full.word()
+full.continue1()
