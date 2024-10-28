@@ -1,14 +1,12 @@
 function same(list1,list2) {
     
-    for(let i = 0; i < list1.length;i++) {
-
-        for(let n = 0; n < list2.length;n++){
-
-            if(list1[i] === list2[n]) {
-                console.log(list1[i])
-            }
-        } 
-    }
+list1.forEach(element => {
+    list2.forEach(element2 => {
+        if(element === element2) {
+            console.log(element)
+        }
+    })
+});
 
 
 }
