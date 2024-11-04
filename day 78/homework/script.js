@@ -1,17 +1,17 @@
-//1
-function sum(list1,list2) {
-    let result = [[],[]]
-    let sum1 = list1[0][0] + list1[0][1]
-    let sum2 = list1[1][0] + list1[1][1]
-    let sum3 = list2[0][0] + list2[0][1]
-    let sum4 = list2[1][0] + list2[1][1]
-    result[0].push(sum1,sum2)
-    result[1].push(sum3,sum4)
-    console.log(result)
-
+function calculate(list1,list2) {
+    let result = []
+    for(let i = 0;i < list1.length;i++){
+        for(let n = 0;n < list2[i].length;n++){
+            let sum = list1[i][n] + list2[i][n]
+            let final = []
+            final.push(sum)
+            result.push(final)
+            console.log(result)
+        }
+    }
 }
 
-sum([[1,3],[1,4]], [[4,1],[2,2]])
+calculate([[1,3],[1,4]], [[4,1],[2,2]])
 
 //3
 function func(list) {    
