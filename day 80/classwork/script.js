@@ -1,0 +1,2 @@
+let members = ['luka gamgonidze','cotne nebieridze','tornike tabukashvili','nikoloz kukava','dato beruashvili',
+    'deme goisashvili','nina joxadze','mate okinashvili','cotne bajelidze','lasha taziashvili','nika suxishvili','luka gvinjilia']
