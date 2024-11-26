@@ -41,5 +41,5 @@ button {
 }
 
 button:hover {
-    background-color: darkred; /* Darker red on hover */
+    background-color: darkred; 
 }
