@@ -1,0 +1,278 @@
+body{
+    background-color: rgb(233, 232, 232);
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    width: 700px;
+    height: 500px;
+    border: solid white;
+    background-color: white;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 125px;
+    border-bottom-right-radius: 170px;
+}
+
+
+
+form{
+    display: flex;
+}
+
+input{
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    border-color:#c0c0c0;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 60px;
+    left: 10px;
+}
+
+input::placeholder{
+    position: relative;
+    left: 10px;
+}
+
+label{
+    display: block;
+    color: gray;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+
+label[for="day"] {
+    position: relative;
+    top: 35px;
+    left: 55px;
+}
+
+label[for="month"] {
+    position: relative;
+    top: 35px;
+    left: 92px;
+}
+
+label[for="year"] { 
+    position: relative;
+    top: 35px;
+    left: 65px;
+}
+
+#b-1{
+    position: absolute;
+    top: 260px;
+    left: 477px;
+    color: #7F00FF;
+    font-size: 110px;
+    word-spacing: -10px;
+}
+
+#b-txt{
+    position: relative;
+    top: 70px;
+    left:170px;
+    font-size: 110px;
+    word-spacing: -10px;
+}
+
+#b-2{
+    position: relative;
+    top: 180px;
+    left: -220px; 
+    color: #7F00FF;
+    font-size: 110px;
+    word-spacing: -10px;
+}
+
+#b-txt2{
+    position: relative;
+    top: 50px;
+    left: 160px;
+    font-size: 110px;
+    word-spacing: -10px;
+}
+
+#b-3{
+    position: absolute;
+    top: 460px;
+    left: 480px; 
+    color: #7F00FF;
+    font-size: 110px;
+    word-spacing: -10px;
+}
+
+#b-txt3{
+    position: relative;
+    top: 150px;
+    right: 220px;
+    font-size: 110px;
+    word-spacing: -10px;
+}
+
+#submit{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    top: 65px;
+    left: 40px;
+    cursor: pointer;
+}
+
+p{
+    position: absolute;
+    color: #ED4337;
+}
+
+#p-day{
+    top: 240px;
+    left: 510px;
+}
+
+#p-month{
+    top: 240px;
+    left: 700px;
+}
+
+#p-year{
+    top: 240px;
+    left: 890px;
+}
+
+@media screen and (max-width:2023px) {
+    #b-1{
+        position: absolute;
+        left: 689px;
+    }
+    #b-3{
+        position: absolute;
+        left: 689px;
+    }
+    
+}
+
+@media screen and (max-width:1663px) {
+    #b-1{
+        position:absolute;
+        left: 500px;
+    }
+    #b-2{
+        position: relative;
+        right: 250px;
+    }
+    #b-3{
+        position: absolute;
+        left: 507px;
+    }
+}
+
+@media screen and (max-width:1498px) {
+    #b-1{
+        position: absolute;
+        left: 422px;
+    }
+    #b-3{
+        position: absolute;
+        left: 422px;
+    }
+}
+
+@media screen and (max-width:1485px) {
+    #b-1{
+        position: absolute;
+        left: 415px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    #b-txt,#b-txt2,#b-txt3{
+        font-size: 2rem;
+    }
+    #b-txt2{
+        position: relative;
+        top: 220px;
+        left: 30px;
+    }
+    #b-txt3{
+        position: relative;
+        left: -105px;
+        top: 160px;
+    }
+    #b-txt{
+        position: relative;
+        top: 280px;
+        left: 160px;
+    }
+    #b-1,#b-2,#b-3{
+        font-size: 3rem;
+    }
+
+    #b-1{
+        position: relative;
+        left: 100px;
+        top: 165px;
+    }
+
+    #b-2{
+        position: relative;
+        left: -16px;
+        top: 225px;
+    }
+
+    #b-3{
+        position: relative;
+        left: -165px;
+        top: 285px;
+    }
+
+    input{
+        width: 50px;
+    }
+    
+    #day{
+        position: relative;
+        left: 10px;
+
+    }
+
+    #month{
+        position: relative;
+        left: -30px;
+    }
+
+
+    #month::placeholder{
+        position: relative;
+        left: 7px;
+    }
+
+    label{
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+
+    label[for = "month"]{
+        position: relative;
+        left: 30px;
+    }
+
+    label[for = "year"]{
+        position: relative;
+        left: 0px;
+    }
+
+    #year{
+        position: relative;
+        left: -50px;
+    }
+
+    #submit{
+        top: 140px;
+        position: relative;
+        left: -205px;
+    }
+}
