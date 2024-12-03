@@ -27,11 +27,15 @@ function sbmt(){
         day.style.borderColor = "#ED4337"
         p1.textContent = "enter a valid day"
         b1.textContent = "- -"
+        b2.textContent = "- -"
+        b3.textContent = "- -"
     } 
      if(isNaN(int3) || int3 > 12 || int3 < 0){
         month.style.borderColor = "#ED4337"
         p2.textContent = "enter a valid month"
         b3.textContent = "- -"
+        b2.textContent = "- -"
+        b1.textContent = "- -"
 
 
     }  
@@ -39,12 +43,14 @@ function sbmt(){
         year.style.borderColor = "#ED4337"
         p3.textContent = "enter a valid year"
         b3.textContent = "- -"
+        b2.textContent = "- -"
+        b1.textContent = "- -"
 
     } 
     else{
         let calc_year = year1 - int2;
         let calc_month = month1 - int3;
-        let calc_day = day1 - int;
+        let calc_day = int - day1;
 
         b1.textContent = calc_year;
         b2.textContent = calc_month;
