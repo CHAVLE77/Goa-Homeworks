@@ -1,7 +1,7 @@
-# def my_func(academy_list):
-#         return "".join(academy_list)
+def my_func(academy_list):
+        return "".join(academy_list)
 
-# print(my_func(["goa","is","best"]))
+print(my_func(["goa","is","best"]))
 
 
 
@@ -17,23 +17,23 @@ print(word_func("GOA"))         # შევქმენით ცვლადი
 
 
 
-# def my_func1(name):
+def my_func1(name):
 
-#         return name.upper()
-
-       
-
-# print(my_func1("goa"))     #  შევქმენით ფუნქცია და შემდეგ გავზარდეთ თითოეული ასო
-
-
-
-# def my_func2(name):
-
-#         return name.lower()
+        return name.upper()
 
        
 
-# print(my_func2("GOA"))
+print(my_func1("goa"))     #  შევქმენით ფუნქცია და შემდეგ გავზარდეთ თითოეული ასო
+
+
+
+def my_func2(name):
+
+        return name.lower()
+
+       
+
+print(my_func2("GOA"))
 
 
 

@@ -48,7 +48,7 @@ const add = new Map([
     ["key3","value3"]
 ]);
 
-add.set("key4")
+add.set("key4","value4")
 
 console.log(add.size)
 
@@ -95,4 +95,5 @@ cleared.clear()
 
 if(cleared.size === 0){
     console.log(cleared)
-}
+} 
+
