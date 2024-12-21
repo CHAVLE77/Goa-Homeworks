@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/06532b8c54.js" crossorigin="anonymous"></script></head>
+<body>
+
+    <header>
+        <nav>
+          <a id="specA" href="login.html">sign in</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p id="headP">Sign up</p>
+        <form id="form">
+            <svg id="svg1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+              <path d="M12 14c4.418 0 8 3.582 8 8H4c0-4.418 3.582-8 8-8z"></path>
+              <circle cx="12" cy="6" r="4"></circle>
+            </svg>
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-solid fa-lock" ></i>
+            <i class="fa-solid fa-lock" id="spec1"></i>
+
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="id" placeholder="ID" required>
+            <input type="password" id="password" placeholder="Password"required>
+            <input type="password" id="repeat-password" placeholder="Repeat Password" required>
+            <button type="submit" id="btn">submit</button>
+        </form>
+        <button id="enter">ქულების შეყვანა</button>
+
+        <div class="enterGrade">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <form id="FORM">
+            <label for="grade">ქულა:</label>
+            <input type="number" id="grade" required>
+            <label for="select">საგანი:</label>
+            <select id="select">
+                <option>მათემატიკა</option>
+            </select>
+
+            <label for="grade">ქულა:</label>
+            <input type="number" id="grade2" required>
+            <label for="select">საგანი:</label>
+            <select id="select2">
+                <option>ქართული</option>
+            </select>
+
+            <label for="grade">ქულა:</label>
+            <input type="number" id="grade3" required>
+            <label for="select">საგანი:</label>
+            <select id="select3">
+                <option>ისტორია</option>
+            </select>
+
+            <label for="grade">ქულა:</label>
+            <input type="number" id="grade4" required>
+            <label for="select">საგანი:</label>
+            <select id="select4">
+                <option>ინგლისური</option>
+            </select>
+            <input id="submit" type="submit">
+        </form>
+        </div>
+        <p id="footP">Already have an account? <a id="link1" href="login.html">Sign in</a></p>
+    </div>
+    <script src="system.js"></script>
+
+    
+</body>
+</html>

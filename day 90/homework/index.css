@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+    width: 100px;
+}
+
+.cell {
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+button{
+    position: relative;
+    top: 50px;
+}
+
+.addGradeDiv{
+    width: 800px;
+    height: 120px;
+    position: absolute;
+    left: 25%;
+    display: none;
+    background-color: white;
+    z-index: 1;
+}
+
+label[for="grade"]{
+    position: relative;
+    top: 40px;
+    left: 20px;
+}
+
+#grade{
+    position: relative;
+    top: 40px;
+    left: 20px;
+}
+
+
+label[for = "select"]{
+    position: relative;
+    top: 40px;
+    left: 60px;
+}
+
+select{
+    position: relative;
+    top: 40px;
+    left: 60px;
+}
+
+#add{
+    position: relative;
+    top: 80px;
+    right: 250px;
+}
+
+#foot{
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+h3{
+    text-align: center;
+    position: relative;
+    top: 40px;
+    right: 75px;
+}
+
+#mid-grade{
+    position: relative;
+    left: 0px;
+    font-size: 25px;
+}

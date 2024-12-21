@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <h1>საგნის ქულები</h1>
+    <table id="schedule">
+
+            <tr>
+                <th>მათემატიკა</th>
+                <td class="cell"></td>
+            </tr>
+
+            <tr>
+                <th>ქართული</th>
+                <td class="cell"></td>
+
+            </tr>
+
+            <tr>
+                <th>ისტორია</th>
+                <td class="cell"></td>
+            </tr>
+
+            
+            <tr>
+                <th>ინგლისური</th>
+                <td class="cell"></td>
+            </tr>
+
+    </table>
+    <button id="addGrade">ქულების დამატება</button>
+
+    <div class="addGradeDiv">
+        <label for="grade">ქულა:</label>
+        <input type="number" id="grade">
+        <label for="select">საგანი:</label>
+        <select id="select">
+            <option>მათემატიკა</option>
+            <option>ქართული</option>
+            <option>ისტორია</option>
+            <option>ინგლისური</option>
+        </select>
+        <button id="add">დამატება</button>
+    </div>
+
+    <h1 id="foot">საშუალო ნიშანი</h1>
+    <h3 id="mid-grade"></h3>
+
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>
