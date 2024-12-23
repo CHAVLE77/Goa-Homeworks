@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; 
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+#intro {
+    text-align: center;
+    background-color: #ffffff; 
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#intro h1 {
+    font-size: 2.5rem;
+    color: #4CAF50; 
+    margin-bottom: 15px;
+}
+
+#intro img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+}
+
+
+#skills {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#skills h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    background-color: #e0f7fa;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 19px;
+    color: #333;
+    font-weight: 500;
+    
+}
+
+#skills li:hover {
+    background-color: #1dc859; 
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #intro h1 {
+        font-size: 32px;
+    }
+
+    #skills h2 {
+        font-size: 28px;
+    }
+
+    #intro img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #skills li {
+        font-size: 16 pixels;
+    }
+}

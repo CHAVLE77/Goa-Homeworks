@@ -1,0 +1,48 @@
+body{
+    background-color: #202020;
+}
+
+#box1 {  
+    margin: 0; 
+    padding: 0; 
+} 
+#contact { 
+    background: #202020; 
+    padding: 1px; 
+    text-align: center; 
+} 
+#contact h2 {
+    margin-bottom: 20px;
+} 
+form { 
+    max-width: 400px;
+    margin: 0 auto; 
+    text-align: left; 
+} 
+label {
+    display: block;
+    margin: 10px 0 5px; 
+    color: white;
+} 
+input, textarea { width: 100%;
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ffd000; 
+    border-radius: 5px; 
+} 
+button { 
+    padding: 10px 20px; 
+    background: #292424; 
+    color: rgb(255, 196, 0); 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+button:hover {
+    background: #ffffff;
+}
+
+
+h2{
+    color: white;
+}
