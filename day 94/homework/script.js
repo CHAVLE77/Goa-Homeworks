@@ -64,6 +64,18 @@ func([1,2,3,4,5],(final)=>{
 
 
 
+
+//4
+function changeColor(color,callback){
+    let result = ''
+    setTimeout(()=>{
+        result += color
+        callback(document.body.style.backgroundColor = result)
+    },2000)
+}
+
+changeColor('red')
+
         
 //5
 function func(){
