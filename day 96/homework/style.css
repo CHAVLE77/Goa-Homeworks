@@ -1,0 +1,27 @@
+.container{
+    width: 300px;
+    height: 300px;
+    border: solid;
+    margin: auto;
+    position: relative;
+    top: 160px;
+}
+
+#score{
+    font-size: 60px;
+    position: relative;
+    left: 130px;
+}
+
+#plus,#minus{
+    width: 60px;
+    height: 60px;
+    margin: 40px;
+    position: relative;
+    bottom: 40px;
+    left: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
