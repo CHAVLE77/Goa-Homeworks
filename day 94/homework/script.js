@@ -1,4 +1,6 @@
 //1
+//წერე ფუნქცია, რომელიც იღებს name და callback ფუნქციას. ფუნქცია უნდა დაიდოს setTimeout()-ში, რომ 2 წამში დაბეჭდოს მისასალმებელი მესიჯი.
+
 function func(name,callback){
     setTimeout(()=>{
         callback('hello' + " " + name)
@@ -13,11 +15,8 @@ func('max',(result)=>{
 
 
 //2
-func('max',(result)=>{
-            console.log(`final result is ${result}`)
-        })
-
-
+//წერე ფუნქცია, რომელიც იღებს მესიჯს და callback ფუნქციას. ფუნქცია უნდა დაბეჭდოს მესიჯი 2 წამით დაგვიანებით setTimeout()-ის გამოყენებით. 
+// შემდეგ callback უნდა ამოწმებდეს, რომ პროცესი დასრულდა.
         function func(name,callback){
             setTimeout(()=>{
                 console.log('step1 start')
@@ -50,6 +49,9 @@ func('max',(result)=>{
 
 
 //3     
+//წერე ფუნქცია, რომელიც იღებს რიცხვების მასივსა და callback ფუნქციას. თითოეული რიცხვის კვადრატის გამოთვლა უნდა განხორციელდეს setTimeout()-ის გამოყენებით,
+//  რათა იყოს რეალური დელაიდებული პროცესი, და შემდეგ უნდა დააბრუნოს ახალი მასივი.
+
 function func(arr,callback){
     setTimeout(()=>{
         for(let i of arr){
@@ -66,6 +68,9 @@ func([1,2,3,4,5],(final)=>{
 
 
 //4
+//წერე ფუნქცია, რომელიც იღებს ფერს და callback ფუნქციას. setTimeout()-ის გამოყენებით უნდა ჩაიწეროს ცვლადში ფერი 2 წამში,
+//  შემდეგ callback უნდა შეცვალოს ტექსტის ფერი.
+
 function changeColor(color,callback){
     let result = ''
     setTimeout(()=>{
@@ -78,6 +83,9 @@ changeColor('red')
 
         
 //5
+//წერე ფუნქცია, რომელიც სთხოვს მომხმარებელს მათი სახელის შეყვანას. setTimeout()-ის გამოყენებით, 
+// 3 წამში უნდა გამოვიდეს ინტერაქტიული შეტყობინება, რომელიც მიულოცავს მათ, რომ დაეხმარა. 
+
 function func(){
     let input = prompt('enter your name: ')
     setTimeout(()=>{
