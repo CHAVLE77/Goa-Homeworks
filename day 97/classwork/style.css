@@ -1,0 +1,58 @@
+body{
+    font-family: sans-serif;
+}
+
+h1{
+    position: relative;
+    left: 35%;
+    top: 20px;
+}
+
+.container{
+    width: 400px;
+    height: 700px;
+    border-radius: 20px;
+    border: solid;
+    margin: auto;
+}
+
+input{
+    display: block;
+    width: 80%;
+    height: 35px;
+    border-radius: 5px;
+    position: relative;
+    left: 20px; 
+    margin: 20px;   
+    top: 40px;
+}
+
+textarea{
+    position: relative;
+    left: 10%;
+    top: 30px;
+    width: 320px;
+    height: 100px;
+}
+
+#btn{
+    width: 60%;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    top: 60px;
+    left: 80px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#random,#remove{
+    width: 120px;
+    height: 45px;
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
