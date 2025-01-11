@@ -1,0 +1,18 @@
+p{
+    color: black;
+    position: relative;
+    top: 400px;
+    text-align: center;
+    font-size: 50px;
+}
+
+#btn{
+    position: relative;
+    left: 735px;
+    top: 400px;
+    padding: 10px 40px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
