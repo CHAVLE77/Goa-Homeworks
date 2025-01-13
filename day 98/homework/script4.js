@@ -5,7 +5,7 @@ btn.addEventListener('click', game);
 
 function game() {
     const randomNumber = Math.floor(Math.random() * 10) + 1; 
-    let input = parseInt(prompt('Enter a number between 1 and 100:'));
+    let input = parseInt(prompt('Enter a number between 1 and 10:'));
 
     while (input !== randomNumber) {
         if (isNaN(input)) {
@@ -18,7 +18,6 @@ function game() {
         input = parseInt(prompt('Enter a number between 1 and 100:'));
     }
 
-    let count2 = 10
     alert('Congratulations! You guessed the correct number.'); 
     count++
     localStorage.setItem('count',count)
