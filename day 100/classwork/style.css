@@ -1,0 +1,118 @@
+body{
+    background: #272D40;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#image{
+    width: 100px;
+    height: 140px;
+}
+
+#category{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.35s;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#price{
+    position: absolute;
+    top:47%;
+    font-size: 1.25rem;
+    transition: 0.35s;
+}
+
+.box:hover{
+    width: 240px;
+    height: 280px;
+}
+
+.box:hover #price{
+    position: relative;
+    top: 225px;
+    font-size: 1.09rem;
+    left: 20px;    
+}
+
+.box:hover img{
+    position: relative;
+    left: 30px;
+}
+
+#title{
+    position: absolute;
+    top: 500px;
+    opacity: 0;
+    transition: 0.35s;
+}
+
+.box:hover #title{
+    opacity: 10;
+    top: 320px;
+}
+
+button{
+    position: absolute;
+    top: 600px;
+    opacity: 0;
+    transition: 0.35s;
+}
+
+.box:hover button{
+    top: 420px;
+    margin-right: 120px;
+    padding: 12px 20px;
+    border: none;
+    background: #F2A20C;
+    opacity: 10;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#desc{
+    text-align: center;
+    margin-top: 35px;
+}
+
+#link{
+    position: absolute;
+    top: 500px;
+    opacity: 0;
+    transition: 0.45s;
+}
+
+
+.box:hover #link {
+    opacity: 10;
+    top: 375px;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+}
+
+.box2{
+    width: 300px;
+    height: 160px;
+    background-color: white;
+    border-radius: 15px;
+}
