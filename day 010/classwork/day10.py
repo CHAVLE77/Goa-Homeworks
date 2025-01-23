@@ -1,1 +1,1 @@
-# no classwork
+# ver vnaxulob day 10 is classworks radgan 14 15 16 jgufebi gavertiandit day59idan 59 is qvevit davalebebi da qlasvorqebi ki arsadaa

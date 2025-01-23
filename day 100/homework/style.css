@@ -1,0 +1,63 @@
+body{
+    background: hsl(218, 23%, 16%);
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.box{
+    width: 450px;
+    height: 300px;
+    border-radius: 15px;
+    background: hsl(217, 19%, 24%);
+    text-align: center;
+}
+
+#p1{
+    margin-right: 30px;
+    color: hsl(150, 100%, 66%);
+}
+
+#p2{
+    position: relative;
+    bottom: 25px;
+    left: 40px;
+    color: hsl(150, 100%, 66%);
+}
+
+#p1,#p2{
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.p-div{
+    position: relative;
+    right: 10px;
+    top: 30px;
+}
+
+#svg1{
+    position: relative;
+    top: 160px;
+}
+
+#btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: hsl(150, 100%, 66%);    
+    position: relative;
+    top:190px;
+    cursor: pointer;
+}
+
+#svg2{
+    margin-top: 3px;
+}
+
