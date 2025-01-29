@@ -42,8 +42,9 @@ body{
 }
 
 #svg1{
-    position: relative;
-    top: 160px;
+    position: absolute;
+    top: 390px;
+    right: 36%;
 }
 
 #btn{
@@ -52,8 +53,9 @@ body{
     border-radius: 50%;
     border: none;
     background: hsl(150, 100%, 66%);    
-    position: relative;
-    top:190px;
+    position: absolute;
+    top:440px;
+    right: 48.5%;
     cursor: pointer;
 }
 
@@ -61,3 +63,17 @@ body{
     margin-top: 3px;
 }
 
+#txt{
+    max-width: 450px;
+    color: white;
+    font-size: 25px;
+    position: static;
+    text-align: center;
+    padding: 55px;
+}
+
+#locate-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

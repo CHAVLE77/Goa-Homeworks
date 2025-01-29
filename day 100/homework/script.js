@@ -1,4 +1,10 @@
 const txt = document.getElementById('txt')
 const btn = document.getElementById('btn')
 
-fetch('').then(res => console.log(res))
+btn.addEventListener('click',()=>{
+    
+fetch('	https://api.adviceslip.com/advice').then(res => res.json()).then(json => {console.log(json)
+    txt.textContent = json.slip.advice 
+})
+
+})

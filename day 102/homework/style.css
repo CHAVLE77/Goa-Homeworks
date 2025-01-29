@@ -76,4 +76,82 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}body{
+    background: hsl(218, 23%, 16%);
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.box{
+    width: 450px;
+    height: 300px;
+    border-radius: 15px;
+    background: hsl(217, 19%, 24%);
+    text-align: center;
+}
+
+#p1{
+    margin-right: 30px;
+    color: hsl(150, 100%, 66%);
+}
+
+#p2{
+    position: relative;
+    bottom: 25px;
+    left: 40px;
+    color: hsl(150, 100%, 66%);
+}
+
+#p1,#p2{
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.p-div{
+    position: relative;
+    right: 10px;
+    top: 30px;
+}
+
+#svg1{
+    position: absolute;
+    top: 390px;
+    right: 36%;
+}
+
+#btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: hsl(150, 100%, 66%);    
+    position: absolute;
+    top:440px;
+    right: 48.5%;
+    cursor: pointer;
+}
+
+#svg2{
+    margin-top: 3px;
+}
+
+#txt{
+    max-width: 450px;
+    color: white;
+    font-size: 25px;
+    position: static;
+    text-align: center;
+    padding: 55px;
+}
+
+#locate-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

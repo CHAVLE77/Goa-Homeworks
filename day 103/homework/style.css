@@ -1,0 +1,44 @@
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.box{
+    width: 450px;
+    height: 300px;
+    border-radius: 15px;
+    background: hsl(217, 19%, 24%);
+    text-align: center;
+}
+
+button{
+    padding: 10px 30px;
+    position: absolute;
+    top: 440px;
+    right: 47%;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.txt-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+}
+
+#txt{
+    position: absolute;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    max-width: 450px;
+}
