@@ -1,0 +1,1 @@
+# day 59 is shemdeg gavertiandit 14 15 16 jgufebi da 59 deis qvemot davalebebi arsad moipoveba amitom ver vaketeb

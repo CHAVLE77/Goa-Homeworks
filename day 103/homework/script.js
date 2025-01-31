@@ -8,7 +8,7 @@ btn.addEventListener('click', () =>{
             let url2 = await fetch(url)
             let transform = await url2.json()
             console.log(transform)
-            txt.textContent = transform.title            
+            txt.textContent += transform.title            
         } catch (error) {
             console.error(error)
         }
