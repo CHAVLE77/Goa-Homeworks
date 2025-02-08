@@ -1,0 +1,1 @@
+export let calculate = 20 * 40

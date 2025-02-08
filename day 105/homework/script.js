@@ -5,12 +5,9 @@ function points(games) {
     let y = games[i][2]
     if(x > y){
         point+=3
-    }else if(x < y){
-        point+=0
     }
-    else{
+    else if(x === y){
         point += 1
-    
     }
   }
   return point
