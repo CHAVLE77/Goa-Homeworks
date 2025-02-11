@@ -7,4 +7,5 @@ import { sum } from "./arr.mjs";
 console.log(func(calculate))
 console.log(new person('sam',30))
 console.log(string1(data))
-console.log(sum[1,2,3,4,5])
+console.log(sum([1,2,3,4,5]))
+
