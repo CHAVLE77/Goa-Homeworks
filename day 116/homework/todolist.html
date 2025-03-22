@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <textarea id="text"></textarea>
+    <button id="submit">click</button>
+    <script>
+        const text = document.getElementById('text')
+        const btn = document.getElementById('submit')
+        btn.addEventListener('click',()=>{
+          let ul = document.createElement('ul')
+          ul.textContent = text.value
+          document.body.appendChild(ul)
+          let remove = document.createElement('button')
+          remove.textContent = 'delete'
+          document.body.appendChild(remove)
+          remove.addEventListener('click',()=>{
+            ul.style.display = 'none'
+            remove.style.display = 'none'
+        })
+        })
+
+    </script>
+
+</body>
+</html>
