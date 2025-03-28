@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(5, 5, 5, 0.932);
+  }
+  
+  h1,p{
+    color: white;
+  }
+  
+  .city{
+    color: rgb(152, 247, 0);
+    margin: 10px;
+  }
+
+  .profile-card {
+    background-color: #202020;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #txt{
+    margin-top: 20px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .name {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .username {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .social-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    margin: 8px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  a{
+    background-color:  #464646;
+    border: #464646;
+  }
+  
+  .social-link:hover {
+    opacity: 0.8;
+  }
+  

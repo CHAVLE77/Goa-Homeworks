@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(204, 240, 204);
+
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    border: 1px solid white;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: -1px 5px 20px;
+    }
+
+
+input{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    opacity: 0.5;
+    margin: 5px;
+}
+
+
+label{
+    display: block;
+}
+
+input[id=lastname]{
+    margin-left: 230px;
+    margin-top: -42px;
+}
+
+label[for=lastname]{
+    margin-top: -42px;
+    margin-left: 230px;
+    margin-bottom: 10px;
+}
+
+.spec{
+    margin-bottom: -15px;
+    margin-left: 10px;
+}
+
+ label[for=name] {
+    margin-left: 10px;
+ }
+    
+
+input[type=email]{
+    width: 430px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+label[for=email] {
+    margin-left: 20px;
+}
+
+
+input[type=number] {
+    width: 300px;
+    height: 30px;
+}
+
+
+label[for=number] {
+    margin-right: 250px;
+}
+
+
+input[id=message] {
+    width: 430px;
+    height: 70px;
+    margin-left: 20px;
+}
+
+label[for=message] {
+    margin-left: 20px;
+}
+
+
+input[type=submit] {
+    width: 300px;
+    height: 40px;
+    margin-top: 40px;
+    color: white;
+    background-color: rgb(10, 141, 69);
+    cursor: pointer;
+}
