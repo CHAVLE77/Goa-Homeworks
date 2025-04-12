@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="login-form">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" required><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (loginUser(username, password)) {
+        window.location.href = 'index.html';
+      } else {
+        alert('Invalid credentials!');
+      }
+    });
+  </script>
+</body>
+</html>

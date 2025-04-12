@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>მომხმარებლები და ძაღლები</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 5px 0; }
+    img { max-width: 300px; margin-top: 20px; border-radius: 10px; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    .error-box { margin-top: 20px; padding: 10px; border-radius: 5px; font-weight: bold; }
+    .success { color: green; background-color: #e6ffe6; }
+    .redirect { color: blue; background-color: #e6f0ff; }
+    .client-error { color: orange; background-color: #fff5e6; }
+    .server-error { color: red; background-color: #ffe6e6; }
+  </style>
+</head>
+<body>
+  <h1>მომხმარებლები (ა-ჰ)</h1>
+  <ul id="user-list"></ul>
+  <div id="user-error"></div>
+
+  <h1>ძაღლის ფოტო</h1>
+  <button id="dog-btn">ახალი ძაღლის ფოტო</button>
+  <div><img id="dog-img" src="" alt="ძაღლი" /></div>
+  <div id="dog-error"></div>
+
+  <script>
+    // მომხმარებლების გამოთხოვა
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => {
+        displayStatus('user-error', res.status);
+        return res.json();
+      })
+      .then(data => {
+        const list = document.getElementById('user-list');
+        const filtered = data.filter(user => {
+          const firstLetter = user.name[0].toLowerCase();
+          return firstLetter >= 'a' && firstLetter <= 'h';
+        });
+        const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
+        sorted.forEach(user => {
+          const li = document.createElement('li');
+          li.textContent = user.name;
+          list.appendChild(li);
+        });
+      })
+      .catch(err => showError('user-error', 'მომხმარებლების ჩატვირთვის შეცდომა: ' + err.message, 'client-error'));
+
+    // ძაღლის ფოტოს ღილაკი და ლოგიკა
+    document.getElementById('dog-btn').addEventListener('click', () => {
+      fetch('https://dog.ceo/api/breeds/image/random')
+        .then(res => {
+          displayStatus('dog-error', res.status);
+          return res.json();
+        })
+        .then(data => {
+          document.getElementById('dog-img').src = data.message;
+        })
+        .catch(err => showError('dog-error', 'ფოტოს ჩატვირთვის შეცდომა: ' + err.message, 'client-error'));
+    });
+
+    // სტატუსის მიხედვით მესიჯის გამოტანა და სტილიზაცია
+    function displayStatus(elementId, status) {
+      const container = document.getElementById(elementId);
+      container.className = 'error-box';
+      if (status === 200) {
+        container.textContent = 'მოთხოვნა წარმატებით შესრულდა (200)';
+        container.classList.add('success');
+      } else if ([301, 302, 304].includes(status)) {
+        container.textContent = 'გადამისამართება (' + status + ')';
+        container.classList.add('redirect');
+      } else if (status >= 400 && status < 500) {
+        container.textContent = 'კლიენტის შეცდომა (' + status + ')';
+        container.classList.add('client-error');
+      } else if (status >= 500) {
+        container.textContent = 'სერვერის შეცდომა (' + status + ')';
+        container.classList.add('server-error');
+      } else {
+        container.textContent = 'სტატუსი: ' + status;
+      }
+    }
+
+    // შეცდომის გამოტანა catch ბლოკებიდან
+    function showError(elementId, message, className) {
+      const container = document.getElementById(elementId);
+      container.className = 'error-box ' + className;
+      container.textContent = message;
+    }
+  </script>
+</body>
+</html>

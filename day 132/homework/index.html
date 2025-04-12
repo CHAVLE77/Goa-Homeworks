@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>უახლესი ამბები</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    .search-box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .search-box input {
+      padding: 10px;
+      width: 70%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .search-box button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #007BFF;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .search-box button:hover {
+      background-color: #0056b3;
+    }
+    .news-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .news-item {
+      width: 30%;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      margin: 10px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+    }
+    .news-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .news-item h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .news-item p {
+      font-size: 1em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>უახლესი ამბები</h1>
+    
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="ძებნა..."/>
+      <button id="searchButton">ძებნა</button>
+    </div>
+
+    <div id="error" style="color: red; text-align: center;"></div>
+
+    <div class="news-container" id="newsContainer">
+      <!-- აქ გამოჩნდება ახალი ამბები -->
+    </div>
+  </div>
+
+  <script>
+    const apiKey = 'YOUR_API_KEY';  
+    const newsContainer = document.getElementById('newsContainer');
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+    const errorEl = document.getElementById('error');
+
+    async function fetchNews(query = '') {
+      try {
+        errorEl.textContent = '';
+        newsContainer.innerHTML = '';
+
+        const url = query
+          ? `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`
+          : `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.status !== 'ok') {
+          throw new Error(data.message);
+        }
+
+        data.articles.forEach(article => {
+          const newsItem = document.createElement('div');
+          newsItem.classList.add('news-item');
+          newsItem.innerHTML = `
+            <img src="${article.urlToImage || 'https://via.placeholder.com/150'}" alt="${article.title}">
+            <h3>${article.title}</h3>
+            <p>${article.description || 'მეტი ინფორმაცია არ არის disponibles'}</p>
+            <a href="${article.url}" target="_blank">წაიკითხეთ მეტი</a>
+          `;
+          newsContainer.appendChild(newsItem);
+        });
+
+        if (data.articles.length === 0) {
+          errorEl.textContent = 'სამწუხაროდ, ვერ ვიპოვეთ შესაბამისი შედეგები.';
+        }
+      } catch (error) {
+        errorEl.textContent = 'შეცდომა: ' + error.message;
+      }
+    }
+
+    fetchNews();
+
+    searchButton.addEventListener('click', () => {
+      const query = searchInput.value.trim();
+      if (query) {
+        fetchNews(query);
+      } else {
+        fetchNews();
+      }
+    });
+
+    searchInput.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        searchButton.click();
+      }
+    });
+  </script>
+
+</body>
+</html>

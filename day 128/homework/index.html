@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ცხოველების ფოტო გენერატორი</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; }
+    img { max-width: 300px; margin-top: 20px; border-radius: 10px; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 10px; }
+    .checkboxes { margin-top: 30px; }
+    .checkboxes label { margin: 0 10px; }
+    .error-box { margin-top: 20px; padding: 10px; border-radius: 5px; font-weight: bold; color: red; background-color: #ffe6e6; }
+  </style>
+</head>
+<body>
+  <h1>ცხოველების ფოტო გენერატორი</h1>
+  <div class="checkboxes">
+    <label><input type="checkbox" id="cat"> კატა</label>
+    <label><input type="checkbox" id="dog"> ძაღლი</label>
+    <label><input type="checkbox" id="fox"> მელა</label>
+  </div>
+  <button id="generate-btn">გენერაცია</button>
+  <div><img id="animal-img" src="" alt="ცხოველი" /></div>
+  <div id="animal-error" class="error-box" style="display: none;"></div>
+
+  <script>
+    document.getElementById('generate-btn').addEventListener('click', () => {
+      const cat = document.getElementById('cat').checked;
+      const dog = document.getElementById('dog').checked;
+      const fox = document.getElementById('fox').checked;
+      const imageEl = document.getElementById('animal-img');
+      const errorEl = document.getElementById('animal-error');
+
+      imageEl.src = '';
+      errorEl.style.display = 'none';
+      errorEl.textContent = '';
+
+      if (!cat && !dog && !fox) {
+        errorEl.style.display = 'block';
+        errorEl.textContent = 'გთხოვთ მონიშნოთ ერთი ან მეტი ცხოველი!';
+        return;
+      }
+
+      const choices = [];
+      if (cat) choices.push('cat');
+      if (dog) choices.push('dog');
+      if (fox) choices.push('fox');
+
+      const choice = choices[Math.floor(Math.random() * choices.length)];
+
+      let url = '';
+      let parser = res => res;
+
+      if (choice === 'cat') {
+        url = 'https://api.thecatapi.com/v1/images/search';
+        parser = res => res[0].url;
+      } else if (choice === 'dog') {
+        url = 'https://dog.ceo/api/breeds/image/random';
+        parser = res => res.message;
+      } else if (choice === 'fox') {
+        url = 'https://randomfox.ca/floof/';
+        parser = res => res.image;
+      }
+
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          imageEl.src = parser(data);
+        })
+        .catch(err => {
+          errorEl.style.display = 'block';
+          errorEl.textContent = 'შეცდომა: ' + err.message;
+        });
+    });
+  </script>
+</body>
+</html>

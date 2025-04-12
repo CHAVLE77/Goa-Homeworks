@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>მომხმარებლები და ძაღლები</title>
+  <style>
+    body {
+     font-family: sans-serif;
+      text-align: center;
+       padding: 20px;
+    
+    }
+    ul { 
+        list-style: none;
+        padding: 0;
+    }
+    li { 
+        margin: 5px 0;
+     }
+    img { 
+        max-width: 300px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    button { 
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+     }
+  </style>
+</head>
+<body>
+  <h1>მომხმარებლები (ა-ჰ)</h1>
+  <ul id="user-list"></ul>
+
+  <h1>ძაღლის ფოტო</h1>
+  <button id="dog-btn">ახალი ძაღლის ფოტო</button>
+  <div><img id="dog-img" src="" alt="ძაღლი" /></div>
+
+  <script>
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById('user-list');
+        const filtered = data.filter(user => {
+          const firstLetter = user.name[0].toLowerCase();
+          return firstLetter >= 'a' && firstLetter <= 'h';
+        });
+        const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
+        sorted.forEach(user => {
+          const li = document.createElement('li');
+          li.textContent = user.name;
+          list.appendChild(li);
+        });
+      });
+
+    document.getElementById('dog-btn').addEventListener('click', () => {
+      fetch('https://dog.ceo/api/breeds/image/random')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('dog-img').src = data.message;
+        });
+    });
+  </script>
+</body>
+</html>

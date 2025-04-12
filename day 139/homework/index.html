@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <div class="container">
+        <form>
+            <label for="day">DAY</label>
+            <input id="day" type="number" placeholder="DD" required>
+            <p id="p-day"></p>
+
+            <label for="month">MONTH</label>
+            <input id="month" type="number" placeholder="MM" required>
+            <p id="p-month"></p>
+
+            <label for="year">YEAR</label>
+            <input id="year" type="number" placeholder="YY" required>
+            <p id="p-year"></p>
+
+            <input id="submit" onclick="sbmt()" type="submit">
+        </form>
+        <b id="b-1">- -</b><b id="b-txt"> years</b>
+        <b id="b-2">- -</b><b id="b-txt2"> months</b>
+        <b id="b-3">- -</b><b id="b-txt3"> days</b>
+    </div>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>

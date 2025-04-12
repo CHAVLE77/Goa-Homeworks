@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/06532b8c54.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body class="flex justify-center align-center">
+    <div class="w-290 h-185 bg-orange-50 relative top-5 flex">
+        <div class="grid grid-cols-3">
+            <div class="w-50 h-40 bg-[url(waffle.jpg)] m-5">
+                <button class="w-30 h-8 bg-white rounded-xl border-orange-800 border-2 relative top-36 left-9 font-medium cursor-pointer hover:bg-orange-800 group">
+                    <i class="fa-solid fa-circle-minus absolute top-1.5 hidden group-hover:inline absolute group-hover:left-4 text-white"></i>
+                    <p class="group-hover:hidden">Add to Cart</p>
+                    <i class="fa-solid fa-circle-plus hidden group-hover:block relative group-hover:left-9 text-white"></i>
+                    <p id="spec" class="absolute group-hover:bottom-0.5 group-hover:left-13.5 text-white hidden group-hover:inline"></p>
+                </button>
+            </div>
+            <p id="spec" class="absolute left-6 top-50 text-sm">waffle</p>
+            <b id="spec" class="absolute left-6 top-55 text-sm">waffle with berries</b>
+            <b id="spec" class="absolute left-6 top-60 text-sm text-orange-800">$6.50</b>
+
+            <div class="w-50 h-40 bg-[url(baklava.jpg)] m-5">
+                <button class="w-30 h-8 bg-white rounded-xl border-orange-800 border-2 relative top-36 left-9 font-medium cursor-pointer hover:bg-orange-800 group">
+                    <i class="fa-solid fa-circle-minus absolute top-1.5 hidden group-hover:inline absolute group-hover:left-4 text-white" id="i-1"></i>
+                    <p class="group-hover:hidden">Add to Cart</p>
+                    <i class="fa-solid fa-circle-plus hidden group-hover:block relative group-hover:left-9 text-white" id="plus-i-1"></i>
+                    <p id="spec" class="absolute group-hover:bottom-0.5 group-hover:left-13.5 text-white hidden group-hover:inline"></p>
+                </button>
+            </div>
+            <p id="spec" class="absolute left-66 top-50 text-sm">baklava</p>
+            <b id="spec" class="absolute left-66 top-55 text-sm">Pistachio Baklava</b>
+            <b id="spec" class="absolute left-66 top-60 text-sm text-orange-800">$4.00</b>
+
+            <div class="w-50 h-40 bg-[url(brownie.jpg)] m-5">
+                <button class="w-30 h-8 bg-white rounded-xl border-orange-800 border-2 relative top-36 left-9 font-medium cursor-pointer hover:bg-orange-800 group">
+                    <i class="fa-solid fa-circle-minus absolute top-1.5 hidden group-hover:inline absolute group-hover:left-4 text-white"></i>
+                    <p class="group-hover:hidden">Add to Cart</p>
+                    <i class="fa-solid fa-circle-plus hidden group-hover:block relative group-hover:left-9 text-white"></i>
+                    <p id="spec" class="absolute group-hover:bottom-0.5 group-hover:left-13.5 text-white hidden group-hover:inline"></p>
+                </button>
+            </div>
+            <p id="spec" class="absolute left-126 top-50 text-sm">Brownie</p>
+            <b id="spec" class="absolute left-126 top-55 text-sm">Chocolate brownie</b>
+            <b id="spec" class="absolute left-126 top-60 text-sm text-orange-800">$4.50</b>
+
+            
+            <div class="w-50 h-40 bg-[url(cake.jpg)] m-5">
+                <button class="w-30 h-8 bg-white rounded-xl border-orange-800 border-2 relative top-36 left-9 font-medium cursor-pointer hover:bg-orange-800 group">
+                    <i class="fa-solid fa-circle-minus absolute top-1.5 hidden group-hover:inline absolute group-hover:left-4 text-white"></i>
+                    <p class="group-hover:hidden">Add to Cart</p>
+                    <i class="fa-solid fa-circle-plus hidden group-hover:block relative group-hover:left-9 text-white"></i>
+                    <p id="spec" class="absolute group-hover:bottom-0.5 group-hover:left-13.5 text-white hidden group-hover:inline"></p>
+                </button>
+            </div>
+            <p id="spec" class="absolute left-6 top-110 text-sm">Cake</p>
+            <b id="spec" class="absolute left-6 top-115 text-sm">Chocolate Cake</b>
+            <b id="spec" class="absolute left-6 top-120 text-sm text-orange-800">$19.50</b>
+
+            <div class="w-50 h-40 bg-[url(cheesecake.jpg)] m-5">
+                <button class="w-30 h-8 bg-white rounded-xl border-orange-800 border-2 relative top-36 left-9 font-medium cursor-pointer hover:bg-orange-800 group">
+                    <i class="fa-solid fa-circle-minus absolute top-1.5 hidden group-hover:inline absolute group-hover:left-4 text-white"></i>
+                    <p class="group-hover:hidden">Add to Cart</p>
+                    <i class="fa-solid fa-circle-plus hidden group-hover:block relative group-hover:left-9 text-white"></i>
+                    <p id="spec" class="absolute group-hover:bottom-0.5 group-hover:left-13.5 text-white hidden group-hover:inline"></p>
+                </button>
+            </div>
+            <p id="spec" class="absolute left-66 top-110 text-sm">cheesecake</p>
+            <b id="spec" class="absolute left-66 top-115 text-sm">Cheesecake</b>
+            <b id="spec" class="absolute left-66 top-120 text-sm text-orange-800">$3.50</b>
+
+            <div class="w-50 h-40 bg-[url(brulee.jpg)] m-5">
+                <button class="w-30 h-8 bg-white rounded-xl border-orange-800 border-2 relative top-36 left-9 font-medium cursor-pointer hover:bg-orange-800 group">
+                    <i class="fa-solid fa-circle-minus absolute top-1.5 hidden group-hover:inline absolute group-hover:left-4 text-white"></i>
+                    <p class="group-hover:hidden">Add to Cart</p>
+                    <i class="fa-solid fa-circle-plus hidden group-hover:block relative group-hover:left-9 text-white"></i>
+                    <p id="spec" class="absolute group-hover:bottom-0.5 group-hover:left-13.5 text-white hidden group-hover:inline"></p>
+                </button>
+            </div>
+            <p id="spec" class="absolute left-126 top-110 text-sm">Crem Brulee</p>
+            <b id="spec" class="absolute left-126 top-115 text-sm">Vanila Bean Crem Brulee</b>
+            <b id="spec" class="absolute left-126 top-120 text-sm text-orange-800">$7.00</b>
+
+            <div class="w-50 h-40 bg-[url(macaron.jpg)] m-5">
+                <button class="w-30 h-8 bg-white rounded-xl border-orange-800 border-2 relative top-36 left-9 font-medium cursor-pointer hover:bg-orange-800 group">
+                    <i class="fa-solid fa-circle-minus absolute top-1.5 hidden group-hover:inline absolute group-hover:left-4 text-white"></i>
+                    <p class="group-hover:hidden">Add to Cart</p>
+                    <i class="fa-solid fa-circle-plus hidden group-hover:block relative group-hover:left-9 text-white"></i>
+                    <p id="spec" class="absolute group-hover:bottom-0.5 group-hover:left-13.5 text-white hidden group-hover:inline"></p>
+                </button>
+            </div>
+            <p id="spec" class="absolute left-6 top-171 text-sm">Macaron</p>
+            <b id="spec" class="absolute left-6 top-175.5 text-sm">Macaron Mix of fibe</b>
+            <b id="spec" class="absolute left-6 top-180 text-sm text-orange-800">$8.00</b>
+
+            
+            <div class="w-50 h-40 bg-[url(pie.jpg)] m-5">
+                <button class="w-30 h-8 bg-white rounded-xl border-orange-800 border-2 relative top-36 left-9 font-medium cursor-pointer hover:bg-orange-800 group">
+                    <i class="fa-solid fa-circle-minus absolute top-1.5 hidden group-hover:inline absolute group-hover:left-4 text-white"></i>
+                    <p class="group-hover:hidden">Add to Cart</p>
+                    <i class="fa-solid fa-circle-plus hidden group-hover:block relative group-hover:left-9 text-white"></i>
+                    <p id="spec" class="absolute group-hover:bottom-0.5 group-hover:left-13.5 text-white hidden group-hover:inline"></p>
+                </button>
+            </div>
+            <p id="spec" class="absolute left-66 top-171 text-sm">Pie</p>
+            <b id="spec" class="absolute left-66 top-175.5 text-sm">Lemon Meringue Pie</b>
+            <b id="spec" class="absolute left-66 top-180 text-sm text-orange-800">$5.00</b>
+
+        
+            <div class="w-50 h-40 bg-[url(tiramisu.jpg)] m-5">
+                <button class="w-30 h-8 bg-white rounded-xl border-orange-800 border-2 relative top-36 left-9 font-medium cursor-pointer hover:bg-orange-800 group">
+                    <i class="fa-solid fa-circle-minus absolute top-1.5 hidden group-hover:inline absolute group-hover:left-4 text-white"></i>
+                    <p class="group-hover:hidden">Add to Cart</p>
+                    <i class="fa-solid fa-circle-plus hidden group-hover:block relative group-hover:left-9 text-white"></i>
+                    <p id="spec" class="absolute group-hover:bottom-0.5 group-hover:left-13.5 text-white hidden group-hover:inline"></p>
+                </button>
+            </div>
+            <p id="spec" class="absolute left-126 top-171 text-sm">Tiramisu</p>
+            <b id="spec" class="absolute left-126 top-175.5 text-sm">Classic Tiramisu</b>
+            <b id="spec" class="absolute left-126 top-180 text-sm text-orange-800">$5.50</b>
+        </div>
+        
+        <div class="w-90 h-100 bg-white relative left-6 rounded-xl">
+            <p class="text-amber-700 text-[30px] m-8 font-bold">Your Cart (0)</p>
+            <img src="illustration-empty-cart.svg" class="relative left-25 top-5">
+            <p class="text-amber-700 relative left-12 top-5">Your added items will appear there</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

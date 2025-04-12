@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ხუმრობისა და რჩევის გენერატორი</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 10px; }
+    .output { margin-top: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; width: 50%; margin-left: auto; margin-right: auto; }
+    .error-box { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>ხუმრობისა და რჩევის გენერატორი</h1>
+  <select id="category">
+    <option value="Any">ნებისმიერი</option>
+    <option value="Programming">პროგრამირება</option>
+    <option value="Miscellaneous">სხვა</option>
+  </select>
+  <button id="generate-btn">გენერაცია</button>
+
+  <div class="output">
+    <h2>ხუმრობა:</h2>
+    <p id="joke"></p>
+    <h2>რჩევა:</h2>
+    <p id="advice"></p>
+  </div>
+  
+  <div id="error" class="error-box" style="display: none;"></div>
+
+  <script>
+    document.getElementById('generate-btn').addEventListener('click', async () => {
+      const category = document.getElementById('category').value;
+      const jokeEl = document.getElementById('joke');
+      const adviceEl = document.getElementById('advice');
+      const errorEl = document.getElementById('error');
+
+      jokeEl.textContent = '';
+      adviceEl.textContent = '';
+      errorEl.style.display = 'none';
+      errorEl.textContent = '';
+
+      try {
+        const jokeRes = await fetch(`https://v2.jokeapi.dev/joke/${category}?safe-mode`);
+        if (!jokeRes.ok) throw new Error('ხუმრობა ვერ მოიპოვება');
+        const jokeData = await jokeRes.json();
+        
+        if (jokeData.type === 'single') {
+          jokeEl.textContent = jokeData.joke;
+        } else {
+          jokeEl.innerHTML = `${jokeData.setup}<br>${jokeData.delivery}`;
+        }
+
+        const adviceRes = await fetch('https://api.adviceslip.com/advice');
+        if (!adviceRes.ok) throw new Error('რჩევა ვერ მოიპოვება');
+        const adviceData = await adviceRes.json();
+        adviceEl.textContent = adviceData.slip.advice;
+      } catch (err) {
+        errorEl.style.display = 'block';
+        errorEl.textContent = `შეცდომა: ${err.message}`;
+      }
+    });
+  </script>
+</body>
+</html>

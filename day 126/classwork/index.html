@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Joke Generator</title>
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#display-div {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #555;
+  min-height: 50px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+</style>
+<body>
+  <div class="container">
+    <div id="display-div" class="display-div">Here will be a joke...</div>
+    <button id="joke-button">Get a Joke</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const jokeButton = document.getElementById('joke-button');
+  const displayDiv = document.getElementById('display-div');
+
+  async function fetchJoke() {
+    try {
+      const response = await fetch('https://v2.jokeapi.dev/joke/Any?safe-mode');
+      const jokeData = await response.json();
+
+      let jokeText = '';
+      if (jokeData.type === 'single') {
+        jokeText = jokeData.joke;
+      } else {
+        jokeText = `${jokeData.setup} - ${jokeData.delivery}`;
+      }
+
+      displayDiv.innerHTML = `<strong>Joke ID:</strong> ${jokeData.id}<br>${jokeText}`;
+    } catch (error) {
+      displayDiv.innerHTML = 'Failed to fetch a joke. Please try again later.';
+    }
+  }
+
+  fetchJoke();
+
+  jokeButton.addEventListener('click', fetchJoke);
+});
+
+  </script>
+</body>
+</html>

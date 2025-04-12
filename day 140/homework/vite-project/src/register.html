@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/06532b8c54.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body{
+  background-color: #E3F2FD;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+.container{
+  width: 530px;
+  height: 550px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 100px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#headP{
+  color:  #2C3E50;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  right: 10px;
+  top: 60px;
+  font-weight: bold;
+}
+
+#headP2{
+  position: relative;
+  text-align: center;
+  top: 50px;
+  right: 5px;
+  font-size: 14px;
+}
+
+input{
+  display: block;
+  margin: 20px;
+  position: relative;
+  left: 80px;
+  top: 60px;
+  padding: 15px 85px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 0px 3px #2C3E50;   
+}
+
+.p-div{
+  position: relative;
+  top: 20px;
+}
+
+
+input::placeholder{
+  position: relative;
+  right: 45px;
+  color: #aaa;
+}
+
+
+
+#spec{
+  top: 257px;
+  left: 45px;
+}
+
+#btn{
+  position: relative;
+  width: 200px;
+  height: 45px;
+  left: 165px;
+  background:linear-gradient(#2C3E50,#8b8b91);
+  cursor: pointer;
+  color: white;
+  border-radius: 20px;
+  top: 75px;
+  border: none;
+}
+
+
+#footP{
+  position: relative;
+  text-align: center;
+  top: 60px;
+  font-size: 15px;
+  left: 5px;
+}
+
+a{
+  text-decoration: none;
+}
+
+#specA{
+  position: relative;
+  left: 470px;
+  top: 35px;
+  text-transform: capitalize;
+  color: #FFD700;
+}
+
+#checkbox{
+  box-shadow: none;
+  position: relative;
+  left: 100px;
+}
+
+#checkP{
+  position: relative;
+  top: 25px;
+  left: 145px;
+  font-size: 15px;
+}
+
+#svg1{
+  position: relative;
+  left: 110px;
+  top: 119px;
+  z-index: 1;
+  color: #2C3E50;
+}
+
+.fa-envelope{
+  position: relative;
+  left: 85px;
+  top: 178px;
+  z-index: 1;
+  color: #2C3E50;
+}
+
+.fa-lock{
+  position: relative;
+  top: 242px;
+  left: 66px;
+  z-index: 1;
+  color: #2C3E50;
+}
+
+#spec{
+  top: 308px;
+  left: 47px;
+}
+
+#footP a{
+  color: blue;
+}
+
+#footP{
+  position: relative;
+  top: 100px;
+}
+</style>
+<body>   
+    <div class="container">
+        <p id="headP">Sign up</p>
+        <form id="form">
+            <svg id="svg1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+              <path d="M12 14c4.418 0 8 3.582 8 8H4c0-4.418 3.582-8 8-8z"></path>
+              <circle cx="12" cy="6" r="4"></circle>
+            </svg>
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-solid fa-lock"></i>
+            <i class="fa-solid fa-lock" id="spec"></i>
+
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="password" placeholder="Password"required>
+            <input type="password" id="repeat-password" placeholder="Repeat Password" required>
+            <button type="submit" id="btn">submit</button>
+        </form>
+        <p id="footP">Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+    <script src="system.js"></script>
+</body>
+</html>
