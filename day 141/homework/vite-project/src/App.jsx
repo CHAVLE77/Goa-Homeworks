@@ -4,8 +4,8 @@ import { Contact } from "./components/contact"
 function App() {
   return (
     <>
-      <Nav />
-      <About />
+      <Nav/>
+      <About/>
       <Contact/>
     </>
   )
