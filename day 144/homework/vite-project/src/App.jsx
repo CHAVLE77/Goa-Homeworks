@@ -27,6 +27,9 @@ function App() {
   }
   function reset(){
     setDisplay(0)
+    setValue('')
+    setValue2('')
+
   }
   return (
     <>
