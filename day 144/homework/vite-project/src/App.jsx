@@ -1,52 +1,52 @@
-import { useState } from 'react'
-
+import React from 'react';
 
 function App() {
-  const [value,setValue] = useState('')
-  const [value2,setValue2] = useState('')
-  const [display,setDisplay] = useState(0)
+  const equipmentList = [
+    {
+      id: 1,
+      name: "Bench Press",
+      image: "4201_9201PowerLiftingBench.jpg",
+      description: "Perfect for chest workouts with adjustable incline levels."
+    },
+    {
+      id: 2,
+      name: "Treadmill",
+      image: "https://via.placeholder.com/200x150.png?text=Treadmill",
+      description: "High-performance treadmill with multiple speed settings."
+    },
+    {
+      id: 3,
+      name: "Dumbbells",
+      image: "https://via.placeholder.com/200x150.png?text=Dumbbells",
+      description: "Set of dumbbells ranging from 2kg to 30kg."
+    },
+    {
+      id: 4,
+      name: "Pull-up Bar",
+      image: "https://via.placeholder.com/200x150.png?text=Pull-up+Bar",
+      description: "Sturdy pull-up bar for upper body exercises."
+    }
+  ];
 
-  function func(e){
-    setValue(Number(e.target.value))
-  }
-
-  function func2(e){
-    setValue2(Number(e.target.value))
-  }
-  function plus(){
-    setDisplay(value + value2)
-  }
-  function minus(){
-    setDisplay(value - value2)
-  }
-  function multiply(){
-    setDisplay(value * value2)
-  }
-  function divide(){
-    setDisplay(value / value2)
-  }
-  function reset(){
-    setDisplay(0)
-    setValue('')
-    setValue2('')
-
-  }
   return (
-    <>
-    <div className='flex justify-center items-center h-80 gap-2'>
-    <input type='number' className='w-30 h-10 border rounded-lg bg-neutral-800 text-white p-1' value={value} onChange={func}></input>
-    <input type='number' className='w-30 h-10 border rounded-lg bg-neutral-800 text-white p-1' value={value2} onChange={func2}></input>
-    </div>
-    <div className='w-63 h-10 border rounded-lg m-auto mt-[-120px] bg-neutral-800 text-white text-[1.5rem] text-center' ><p>{display}</p></div>
-    <div className='w-65 bg-stone-900 h-30 border rounded-lg m-auto mt-5 '>
-      <button className='w-9 h-9 bg-orange-500 text-white text-[1.1rem]  border m-5 rounded-lg cursor-pointer' onClick={plus}>+</button>
-      <button className='w-9 h-9 border rounded-lg cursor-pointer bg-orange-500 text-white text-[1.1rem]' onClick={minus}>-</button>
-      <button className='w-9 h-9 border m-5 rounded-lg cursor-pointer bg-orange-500 text-white text-[1.1rem]' onClick={multiply}>*</button>
-      <button className='w-9 h-9 border rounded-lg cursor-pointer bg-orange-500 text-white text-[1.1rem]' onClick={divide}>/</button>
-      <button className='w-15 h-9 border ml-25 cursor-pointer rounded-lg bg-lime-600 text-white' onClick={reset}>reset</button>
+    <div className="p-8 font-sans bg-gray-100 min-h-screen">
+      <h1 className="text-4xl font-bold text-center mb-10">Gym Inventory</h1>
+      <div className="flex flex-wrap justify-center gap-8">
+        {equipmentList.map((item) => (
+          <div
+            key={item.id}
+            className="bg-white rounded-xl shadow-md overflow-hidden w-64 transform hover:scale-105 transition duration-300"
+          >
+            <img src={item.image} alt={item.name} className="w-full h-40 object-cover" />
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+              <p className="text-gray-600 text-sm">{item.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
