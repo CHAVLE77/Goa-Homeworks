@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import parts from './parts'
 
 const Index = () => {
   const [count, setCount] = useState(0)
   const [addedItems, setAddedItems] = useState([])
-  useEffect(() => {
-    document.body.style.backgroundColor = '#f4f4f3'
-  }, [])
+
+  document.body.style.backgroundColor = '#f4f4f3'
 
   function addToCart(item) {
     setCount((prev) => prev + 1)
@@ -16,7 +15,7 @@ const Index = () => {
 
       if (check) {
         return prevItems.map((el) =>
-          el.id === item.id ? { ...el, quantity: el.quantity + 1 } : el
+          el.id === item.id ? { ...el, quantity: el.quantity + 1 } : el 
         )
       } else {
         return [...prevItems, { ...item, quantity: 1 }]
