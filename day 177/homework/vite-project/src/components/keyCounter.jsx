@@ -23,6 +23,7 @@ const KeyCounter = () => {
     <>
     <p>{count}</p>
     <input className='border' type="text" onFocus={()=>setIsFocused(true)} onBlur={()=>setIsFocused(false)} placeholder='enter any things'/>
+    <button className='border block m-2 cursor-pointer' onClick={()=>console.log(count)}>Click</button>
     </>
 )
 }
